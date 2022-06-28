@@ -20,17 +20,21 @@ function askWhereYouLive() {
 }
 
 function askWashingtonCapital() {
-    let userAnswer = prompt("What is the capital of Washington?");
+    const questionText = "What is the capital of Washington?"; 
     const correctAnswer = "<p>Correct - Olympia is the capital!</p>";
+    let userAnswer = prompt(questionText);
 
-    if (userAnswer === "Olympia"){
-        document.write(correctAnswer);
-    } else {
-        userAnswer = prompt("Please try again: what is the capital of Washington?");
-        if (userAnswer === "Olympia"){
-            document.write(correctAnswer);
-        } else {
-            document.write("<p>Olympia is the capital!</p>");
-        }
-    }  
+    while (userAnswer != "Olympia") {
+        console.log("Incorrect: You guessed: " + userAnswer);
+        userAnswer = prompt("Incorrect - please try again. "+questionText);
+    }
+    document.write("<p>Olympia is the capital!</p>");
+}
+
+function addSpaceNeedles(){
+    let spaceNeedles = prompt("Please decorate this page - how many Space Needles would you like, 1-5?");
+    if (spaceNeedles > 5) {spaceNeedles = 5};
+    for (let i = 1; i <= spaceNeedles; i++){
+        document.write("<p><img src='images/SpaceNeedleResized.jpg' alt='Space Needle'></p>")
+    }
 }
