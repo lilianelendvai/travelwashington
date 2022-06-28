@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TravelWashington</title>
 <link rel="stylesheet" href="style.css">
+<script src="app.js"></script>
+
 </head>
 
 <body>
@@ -22,25 +24,16 @@
             </ul>
             
         </nav>
-        <script>
-             let name = prompt("What is your name?");
-             document.write("Thanks for stopping by, " + name);
-        </script>
+        
+        <script>askUserName()</script>
 
     </header>
 
     <main>
         <h1>Welcome to Travel Washington!</h1>
-
         
         <botton onclick="myFunction()">CLICK HERE</botton>
-
-        <script>
-            function myFunction() {
-                confirm("Please visit again... more info to come!");
-            }
-        </script>    
-
+   
         <p> Washington is a place of abundant beauty and splendor. I hope you enjoy learning a little bit about what this majestic state has to offer! </p>
         <ul>
             <li class="image"><img src="images/MountRainierResized.jpg" alt="tree logo"></li>
@@ -49,18 +42,10 @@
             <li class="image"><img src="images/SanJuanIslandsResized.jpg" alt="tree logo"></li>
         </ul>
 
-        <script>
-            let whereYouLive = prompt("Do you live in Washington?");
+        <script>askWhereYouLive()</script>
 
-            if (whereYouLive === "Yes") {
-                console.log("Great, and feel free to send us your favorite travel destinations in Washington!");
-                document.write("Washington's a wonderful place to live!");
-            } else {
-                console.log("I hope you check out these places in Washginton soon!");
-                document.write("I hope you'll be inspired to travel around Washington soon!");
-            }
-        </script>
-
+        <script>askWashingtonCapital()</script>
+        
         <h2>My Favorite Places</h2>
 
         <ol>
